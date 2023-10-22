@@ -22,7 +22,8 @@ while True:
     for partida in range(dados_do_jogador['partidas']):
         gols = int(input(f'Na {partida + 1}ª partida {dados_do_jogador["nome"]} fez quantos gols:'))
         dados_do_jogador['Gols por partidas'].append(gols)
-        soma += gols
+        soma = dados_do_jogador['Total_de_gols'] = sum(dados_do_jogador['Gols por partidas'])
+
 
     print('Gerando um relatório....')
     sleep(2)
